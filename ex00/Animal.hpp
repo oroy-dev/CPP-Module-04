@@ -6,7 +6,7 @@
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 21:32:20 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/06 22:15:49 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	Animal(void);
 	Animal(Animal const &src);
 	Animal &operator=(Animal const &rhs);
-	~Animal(void);
+	virtual	~Animal(void);
 
 	std::string		getType(void) const;
 	virtual void	makeSound(void) const;

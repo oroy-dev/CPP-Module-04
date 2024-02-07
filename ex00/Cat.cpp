@@ -17,6 +17,7 @@
 Cat::Cat(void)
 {
 	std::cout << CAT_PREFIX << "Default constructor called" << std::endl;
+	type = "Cat";
 	return ; 
 }
 

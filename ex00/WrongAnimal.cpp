@@ -1,49 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:04:06 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 21:07:45 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/06 21:29:40 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Dog::Dog(void)
+WrongAnimal::WrongAnimal(void)
 {
-	std::cout << DOG_PREFIX << "Default constructor called" << std::endl;
-	type = "Dog";
+	std::cout << WANIMAL_PREFIX << "Default constructor called" << std::endl;
+	type = "Captain Falcon";
 	return ; 
 }
 
-Dog::Dog(Dog const &src)
+WrongAnimal::WrongAnimal(WrongAnimal const &src)
 {
-	std::cout << DOG_PREFIX << "Constructor by copy called" << std::endl;
+	std::cout << WANIMAL_PREFIX << "Constructor by copy called" << std::endl;
 	*this = src;
 	return ; 
 }
 
-Dog	&Dog::operator=(Dog const &rhs)
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs)
 {
-	std::cout << DOG_PREFIX << "Assignment to instance called" << std::endl;
+	std::cout << WANIMAL_PREFIX << "Assignment to instance called" << std::endl;
 	type = rhs.type;
 	return (*this);
 }
 
-Dog::~Dog(void)
+WrongAnimal::~WrongAnimal(void)
 {
-	std::cout << DOG_PREFIX << "Destructor called" << std::endl;
+	std::cout << WANIMAL_PREFIX << "Destructor called" << std::endl;
 	return ; 
 }
 
 /*	Add-ons ----------------------------------------------------------------- */
 
-void	Dog::makeSound(void) const
+std::string	WrongAnimal::getType(void) const
 {
-	std::cout << DOG_PREFIX << "Woof !" << std::endl;
+	return (type);
+}
+
+void	WrongAnimal::makeSound(void) const
+{
+	std::cout << WANIMAL_PREFIX << "Show me your move !" << std::endl;
 }

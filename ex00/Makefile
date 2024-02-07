@@ -6,14 +6,14 @@
 #    By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/02/06 21:26:42 by olivierroy       ###   ########.fr        #
+#    Updated: 2024/02/06 22:09:55 by olivierroy       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= polymorphism
 
 OBJDIR	:= obj
-SRC		:= main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC		:= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
 CC		:= c++

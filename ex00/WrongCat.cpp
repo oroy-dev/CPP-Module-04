@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,40 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Dog::Dog(void)
+WrongCat::WrongCat(void)
 {
-	std::cout << DOG_PREFIX << "Default constructor called" << std::endl;
-	type = "Dog";
+	std::cout << WCAT_PREFIX << "Default constructor called" << std::endl;
+	type = "Rooster";
 	return ; 
 }
 
-Dog::Dog(Dog const &src)
+WrongCat::WrongCat(WrongCat const &src)
 {
-	std::cout << DOG_PREFIX << "Constructor by copy called" << std::endl;
+	std::cout << WCAT_PREFIX << "Constructor by copy called" << std::endl;
 	*this = src;
 	return ; 
 }
 
-Dog	&Dog::operator=(Dog const &rhs)
+WrongCat	&WrongCat::operator=(WrongCat const &rhs)
 {
-	std::cout << DOG_PREFIX << "Assignment to instance called" << std::endl;
+	std::cout << WCAT_PREFIX << "Assignment to instance called" << std::endl;
 	type = rhs.type;
 	return (*this);
 }
 
-Dog::~Dog(void)
+WrongCat::~WrongCat(void)
 {
-	std::cout << DOG_PREFIX << "Destructor called" << std::endl;
+	std::cout << WCAT_PREFIX << "Destructor called" << std::endl;
 	return ; 
 }
 
 /*	Add-ons ----------------------------------------------------------------- */
 
-void	Dog::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
-	std::cout << DOG_PREFIX << "Woof !" << std::endl;
+	std::cout << WCAT_PREFIX << "Cocorico !" << std::endl;
 }

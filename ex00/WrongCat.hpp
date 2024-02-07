@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 22:15:55 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/06 22:16:18 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-# ifndef	CAT_PREFIX
-#  define 	CAT_PREFIX "\033[1;32m[Cat]\033[0m		"
-# endif /*  CAT_PREFIX */
+# ifndef	WCAT_PREFIX
+#  define 	WCAT_PREFIX "\033[1;32m[WrongCat]\033[0m	"
+# endif /*  WCAT_PREFIX */
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 public:
 
-	Cat(void);
-	Cat(Cat const &src);
-	Cat &operator=(Cat const &rhs);
-	virtual	~Cat(void);
+	WrongCat(void);
+	WrongCat(WrongCat const &src);
+	WrongCat &operator=(WrongCat const &rhs);
+	virtual	~WrongCat(void);
 
 	virtual void	makeSound(void) const;
 };
