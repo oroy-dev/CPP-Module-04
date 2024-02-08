@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 22:16:18 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/08 15:43:56 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ public:
 	WrongCat(void);
 	WrongCat(WrongCat const &src);
 	WrongCat &operator=(WrongCat const &rhs);
-	virtual	~WrongCat(void);
+	~WrongCat(void);
 
-	virtual void	makeSound(void) const;
+	void	makeSound(void) const;
 };
 
 #endif
