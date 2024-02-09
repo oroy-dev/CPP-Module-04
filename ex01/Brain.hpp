@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/09 15:46:38 by oroy             ###   ########.fr       */
+/*   Created: 2024/02/09 15:50:45 by oroy              #+#    #+#             */
+/*   Updated: 2024/02/09 16:15:44 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_H
-# define WRONGANIMAL_H
+#ifndef BRAIN_H
+# define BRAIN_H
 
 # include <iostream>
 # include <string>
 
-# ifndef	WANIMAL_PREFIX
-#  define 	WANIMAL_PREFIX "\033[1;33m[WrongAnimal]\033[0m	"
-# endif /*  WANIMAL_PREFIX */
-
-class WrongAnimal
+class Brain
 {
-protected:
+private:
 
-	std::string	type;
+	std::string	_ideas[100];
 
 public:
 
-	WrongAnimal(void);
-	WrongAnimal(WrongAnimal const &src);
-	WrongAnimal &operator=(WrongAnimal const &rhs);
-	virtual ~WrongAnimal(void);
+	Brain(void);
+	Brain(Brain const &src);
+	Brain &operator=(Brain const &rhs);
+	~Brain(void);
 
-	std::string		getType(void) const;
-	virtual void	makeSound(void) const;
 };
+
+# ifndef	BRAIN_PREFIX
+#  define 	BRAIN_PREFIX "\033[1;34m[Brain]\033[0m		"
+# endif /*  BRAIN_PREFIX */
 
 #endif

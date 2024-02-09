@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:15:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/08 16:16:03 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/09 15:48:51 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int main()
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	j->makeSound(); //will output the dog sound!
+	meta->makeSound(); //will output nothing
 	
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -33,18 +33,14 @@ int main()
 	std::cout << k->getType() << " " << std::endl;
 	std::cout << l->getType() << " " << std::endl;
 	l->makeSound(); //will output the cat sound!
-	k->makeSound();
+	k->makeSound(); //will output the dog sound!
 
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	Animal	*m = new Animal(*j);
-	Animal	*n = new Cat();
-	n = m;
+	Animal	*m = new Dog(*k);
 	std::cout << m->getType() << " " << std::endl;
-	std::cout << n->getType() << " " << std::endl;
 	m->makeSound(); //will output the dog sound!
-	n->makeSound(); //will output the dog sound!
 
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -55,6 +51,18 @@ int main()
 	std::cout << wrongmeta->getType() << " " << std::endl;
 	wrongi->makeSound();
 	wrongmeta->makeSound();
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	delete wrongi;
+	delete wrongmeta;
+	delete m;
+	delete l;
+	delete k;
+	delete i;
+	delete j;
+	delete meta;
 
 	return 0;
 }
