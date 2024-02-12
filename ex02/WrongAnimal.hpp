@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 14:27:08 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/09 15:46:38 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef WRONGANIMAL_H
+# define WRONGANIMAL_H
 
 # include <iostream>
 # include <string>
 
-# ifndef	ANIMAL_PREFIX
-#  define 	ANIMAL_PREFIX "\033[1;33m[Animal]\033[0m	"
-# endif /*  ANIMAL_PREFIX */
+# ifndef	WANIMAL_PREFIX
+#  define 	WANIMAL_PREFIX "\033[1;33m[WrongAnimal]\033[0m	"
+# endif /*  WANIMAL_PREFIX */
 
-class Animal
+class WrongAnimal
 {
 protected:
 
@@ -28,10 +28,10 @@ protected:
 
 public:
 
-	Animal(void);
-	Animal(Animal const &src);
-	Animal &operator=(Animal const &rhs);
-	virtual ~Animal(void);
+	WrongAnimal(void);
+	WrongAnimal(WrongAnimal const &src);
+	WrongAnimal &operator=(WrongAnimal const &rhs);
+	virtual ~WrongAnimal(void);
 
 	std::string		getType(void) const;
 	virtual void	makeSound(void) const;

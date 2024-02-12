@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 14:27:08 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/08 15:43:56 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
-# include <iostream>
-# include <string>
+# include "WrongAnimal.hpp"
 
-# ifndef	ANIMAL_PREFIX
-#  define 	ANIMAL_PREFIX "\033[1;33m[Animal]\033[0m	"
-# endif /*  ANIMAL_PREFIX */
+# ifndef	WCAT_PREFIX
+#  define 	WCAT_PREFIX "\033[1;32m[WrongCat]\033[0m	"
+# endif /*  WCAT_PREFIX */
 
-class Animal
+class WrongCat : public WrongAnimal
 {
-protected:
-
-	std::string	type;
-
 public:
 
-	Animal(void);
-	Animal(Animal const &src);
-	Animal &operator=(Animal const &rhs);
-	virtual ~Animal(void);
+	WrongCat(void);
+	WrongCat(WrongCat const &src);
+	WrongCat &operator=(WrongCat const &rhs);
+	~WrongCat(void);
 
-	std::string		getType(void) const;
-	virtual void	makeSound(void) const;
+	void	makeSound(void) const;
 };
 
 #endif

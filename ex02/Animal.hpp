@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 14:27:08 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 17:40:23 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #  define 	ANIMAL_PREFIX "\033[1;33m[Animal]\033[0m	"
 # endif /*  ANIMAL_PREFIX */
 
-class Animal
+class AAnimal
 {
 protected:
 
