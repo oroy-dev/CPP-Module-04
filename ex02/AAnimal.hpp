@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 17:40:23 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 14:27:08 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef AANIMAL_H
+# define AANIMAL_H
 
 # include <iostream>
 # include <string>
 
-# ifndef	ANIMAL_PREFIX
-#  define 	ANIMAL_PREFIX "\033[1;33m[Animal]\033[0m	"
-# endif /*  ANIMAL_PREFIX */
+# ifndef	AANIMAL_PREFIX
+#  define 	AANIMAL_PREFIX "\033[1;33m[AAnimal]\033[0m	"
+# endif /*  AANIMAL_PREFIX */
 
 class AAnimal
 {
@@ -28,13 +28,13 @@ protected:
 
 public:
 
-	Animal(void);
-	Animal(Animal const &src);
-	Animal &operator=(Animal const &rhs);
-	virtual ~Animal(void);
+	AAnimal(void);
+	AAnimal(AAnimal const &src);
+	AAnimal &operator=(AAnimal const &rhs);
+	virtual ~AAnimal(void);
 
 	std::string		getType(void) const;
-	virtual void	makeSound(void) const;
+	virtual void	makeSound(void) const = 0;
 };
 
 #endif

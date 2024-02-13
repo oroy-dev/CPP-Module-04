@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 15:50:48 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 23:22:13 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_H
 # define DOG_H
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 private:
 
@@ -29,8 +29,9 @@ public:
 	Dog &operator=(Dog const &rhs);
 	~Dog(void);
 
-	void	makeSound(void) const;
-	void	getBrainIdeas(int const total) const;
+	std::string	getBrainIdea(void) const;
+	void		makeSound(void) const;
+	void		setBrainIdeas(std::string const idea);
 
 };
 

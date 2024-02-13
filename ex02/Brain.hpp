@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 15:50:45 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/12 15:57:14 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 23:08:40 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ public:
 	Brain &operator=(Brain const &rhs);
 	~Brain(void);
 
-	void	setIdeas(std::string const idea);
-	void	getIdeas(int const total) const;
+	void		setIdeas(std::string const idea);
+	std::string	getIdea(void) const;
 
 };
 

@@ -1,53 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:04:06 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 15:51:21 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 23:08:08 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Animal::Animal(void)
+AAnimal::AAnimal(void)
 {
-	std::cout << ANIMAL_PREFIX << "Default constructor called" << std::endl;
+	std::cout << AANIMAL_PREFIX << "Default constructor called" << std::endl;
 	return ; 
 }
 
-Animal::Animal(Animal const &src)
+AAnimal::AAnimal(AAnimal const &src)
 {
-	std::cout << ANIMAL_PREFIX << "Constructor by copy called" << std::endl;
+	std::cout << AANIMAL_PREFIX << "Constructor by copy called" << std::endl;
 	*this = src;
 	return ; 
 }
 
-Animal	&Animal::operator=(Animal const &rhs)
+AAnimal	&AAnimal::operator=(AAnimal const &rhs)
 {
-	std::cout << ANIMAL_PREFIX << "Assignment to instance called" << std::endl;
+	std::cout << AANIMAL_PREFIX << "Assignment to instance called" << std::endl;
 	type = rhs.type;
 	return (*this);
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << ANIMAL_PREFIX << "Destructor called" << std::endl;
+	std::cout << AANIMAL_PREFIX << "Destructor called" << std::endl;
 	return ; 
 }
 
 /*	Member Functions -------------------------------------------------------- */
 
-std::string	Animal::getType(void) const
+std::string	AAnimal::getType(void) const
 {
 	return (type);
 }
 
-void	Animal::makeSound(void) const
+void	AAnimal::makeSound(void) const
 {
-	std::cout << ANIMAL_PREFIX << std::endl;
+	std::cout << AANIMAL_PREFIX << std::endl;
 }

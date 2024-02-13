@@ -43,7 +43,7 @@ Cat::~Cat(void)
 {
 	std::cout << CAT_PREFIX << "Destructor called" << std::endl;
 	delete	_brain;
-	return ; 
+	return ;
 }
 
 /*	Member Functions -------------------------------------------------------- */
@@ -53,7 +53,12 @@ void	Cat::makeSound(void) const
 	std::cout << CAT_PREFIX << "Meow !" << std::endl;
 }
 
-void	Cat::getBrainIdeas(int const total) const
+std::string	Cat::getBrainIdea(void) const
 {
-	_brain->getIdeas(total);
+	return (_brain->getIdea());
+}
+
+void	Cat::setBrainIdeas(std::string const idea)
+{
+	_brain->setIdeas(idea);
 }

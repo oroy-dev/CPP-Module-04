@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
+#    By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/02/09 16:09:08 by oroy             ###   ########.fr        #
+#    Updated: 2024/02/12 23:22:46 by olivierroy       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= polymorphism
+NAME	:= abstract
 
 OBJDIR	:= obj
-SRC		:= main.cpp Animal.cpp Brain.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC		:= main.cpp AAnimal.cpp Brain.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
 CC		:= c++

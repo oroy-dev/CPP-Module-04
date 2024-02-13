@@ -53,7 +53,12 @@ void	Dog::makeSound(void) const
 	std::cout << DOG_PREFIX << "Woof !" << std::endl;
 }
 
-void	Dog::getBrainIdeas(int const total) const
+std::string	Dog::getBrainIdea(void) const
 {
-	_brain->getIdeas(total);
+	return (_brain->getIdea());
+}
+
+void	Dog::setBrainIdeas(std::string const idea)
+{
+	_brain->setIdeas(idea);
 }
