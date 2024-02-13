@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:54:37 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 15:50:40 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 22:09:16 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ public:
 	Cat &operator=(Cat const &rhs);
 	~Cat(void);
 
-	void	makeSound(void) const;
-	void	getBrainIdeas(int const total) const;
+	std::string	getBrainIdea(void) const;
+	void		makeSound(void) const;
+	void		setBrainIdeas(std::string const idea);
 
 };
 

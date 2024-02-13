@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 15:51:11 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/12 15:57:10 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/12 23:07:08 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ void	Brain::setIdeas(std::string const idea)
 		_ideas[i] = idea;
 }
 
-void	Brain::getIdeas(int const total) const
+std::string	Brain::getIdea(void) const
 {
-	for (int i = 0; i < total; i++)
-		std::cout << _ideas[i] << std::endl;
+	return (_ideas[0]);
 }
