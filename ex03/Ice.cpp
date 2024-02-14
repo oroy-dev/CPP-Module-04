@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 16:10:33 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 16:24:34 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/13 23:52:46 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Ice::Ice(void)
+Ice::Ice(void) : AMateria("ice")
 {
 	return ;
 }
 
-Ice::Ice(Ice const &src)
+Ice::Ice(Ice const &src) : AMateria(src.getType())
 {
-	*this = src;
 	return ;
 }
 
-Ice::Ice(std::string const &type)
+Ice::Ice(std::string const &type) : AMateria(type)
 {
-	_type = type;
 	return ;
 }
 

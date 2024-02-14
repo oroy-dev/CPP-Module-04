@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:59:24 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 17:03:44 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/13 23:49:57 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,18 @@
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Cure::Cure(void)
+Cure::Cure(void) : AMateria("cure")
 {
 	return ;
 }
 
-Cure::Cure(Cure const &src)
+Cure::Cure(Cure const &src) : AMateria(src.getType())
 {
-	*this = src;
 	return ;
 }
 
-Cure::Cure(std::string const &type)
+Cure::Cure(std::string const &type) : AMateria(type)
 {
-	_type = type;
 	return ;
 }
 

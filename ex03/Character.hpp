@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:47:50 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 16:45:50 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/13 23:58:24 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ class Character : public ICharacter
 {
 private:
 
-	std::string	_name;
-	AMateria	*_materia[4];
+	std::string const	_name;
+	AMateria			*_materia[4];
 
 public:
 
 	Character(void);
-	Character(std::string name);
 	Character(Character const &src);
+	Character(std::string const name);
 	Character &operator=(Character const &rhs);
 	~Character(void);
 

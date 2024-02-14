@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:23:25 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 19:44:44 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/14 00:23:06 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ void	MateriaSource::learnMateria(AMateria *materia)
 	for (int i = 0; i < 4; i++)
 	{
 		if (!_materia[i])
+		{
 			_materia[i] = materia;
+			break ;	
+		}
 	}
 }
 

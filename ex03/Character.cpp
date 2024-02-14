@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 16:27:26 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 19:44:10 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/14 00:23:01 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Character::Character(void)
+Character::Character(void) : _name("no_name")
 {
 	return ;
 }
 
-Character::Character(std::string name) : _name(name)
+Character::Character(std::string const name) : _name(name)
 {
 	return ;
 }
 
-Character::Character(Character const &src)
+Character::Character(Character const &src) : _name(src.getName())
 {
 	*this = src;
 	return ;
@@ -34,7 +34,9 @@ Character	&Character::operator=(Character const &rhs)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		delete _materia[i];
+		if (_materia[i])
+			delete _materia[i];
+		// Pas sûr que c'est une copie profonde ici.
 		_materia[i] = rhs._materia[i];
 	}
 	return (*this);
@@ -43,7 +45,10 @@ Character	&Character::operator=(Character const &rhs)
 Character::~Character(void)
 {
 	for (int i = 0; i < 4; i++)
-		delete _materia[i];
+	{
+		if (_materia[i])
+			delete _materia[i];
+	}
 	return ;
 }
 
@@ -59,7 +64,10 @@ void	Character::equip(AMateria* m)
 	for (int i = 0; i < 4; i++)
 	{
 		if (!_materia[i])
+		{
 			_materia[i] = m;
+			break ;	
+		}
 	}
 }
 

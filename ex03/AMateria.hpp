@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:10:48 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 19:43:27 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/13 23:37:39 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class AMateria
 {
 protected:
 
-	std::string	_type;
+	std::string const	_type;
 
 public:
 
