@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+         #
+#    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/02/14 00:14:52 by olivierroy       ###   ########.fr        #
+#    Updated: 2024/02/14 16:40:53 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= ff7
 
 OBJDIR	:= obj
-SRC		:= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
+SRC		:= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp Supernova.cpp
 OBJ		:= $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRC))
 
 CC		:= c++
@@ -45,6 +45,7 @@ re: fclean all
 # VALGRIND ******************************************************************* #
 
 vleaks:
+	$(MAKE)
 	valgrind \
 	--leak-check=full \
 	--show-leak-kinds=all \

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Supernova.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,44 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "Supernova.hpp"
 
 /*	Canonical Form Requirements --------------------------------------------- */
 
-Ice::Ice(void) : AMateria("ice")
+Supernova::Supernova(void) : AMateria("supernova")
 {
 	return ;
 }
 
-Ice::Ice(Ice const &src) : AMateria(src.getType())
+Supernova::Supernova(Supernova const &src) : AMateria(src.getType())
 {
 	return ;
 }
 
-Ice::Ice(std::string const &type) : AMateria(type)
+Supernova::Supernova(std::string const &type) : AMateria(type)
 {
 	return ;
 }
 
-Ice	&Ice::operator=(Ice const &rhs)
+Supernova	&Supernova::operator=(Supernova const &rhs)
 {
 	(void) rhs;
 	return (*this);
 }
 
-Ice::~Ice(void)
+Supernova::~Supernova(void)
 {
 	return ;
 }
 
 /*	Member Functions -------------------------------------------------------- */
 
-AMateria	*Ice::clone() const
+AMateria	*Supernova::clone() const
 {
-	return (new Ice());
+	return (new Supernova());
 }
 
-void	Ice::use(ICharacter &target)
+void	Supernova::use(ICharacter &target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "* throws all the planets of the galaxy at " << target.getName() << ", decimating pretty much everything at the same time *" << std::endl;
 }

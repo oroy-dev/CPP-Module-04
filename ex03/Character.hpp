@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:47:50 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 23:58:24 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/14 17:13:48 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ public:
 	void equip(AMateria* m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
+
+	AMateria	*getMateriaAddress(int idx) const;
 
 };
 

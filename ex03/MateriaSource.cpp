@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:23:25 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/14 00:23:06 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/14 18:19:48 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 
 MateriaSource::MateriaSource(void)
 {
+	for (int i = 0; i < 4; i++)
+		_materia[i] = NULL;
 	return ;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &src)
 {
+	for (int i = 0; i < 4; i++)
+		_materia[i] = NULL;
 	*this = src;
 	return ;
 }
@@ -33,6 +37,11 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs)
 
 MateriaSource::~MateriaSource(void)
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (_materia[i])
+			delete _materia[i];
+	}
 	return ;
 }
 
@@ -45,9 +54,10 @@ void	MateriaSource::learnMateria(AMateria *materia)
 		if (!_materia[i])
 		{
 			_materia[i] = materia;
-			break ;	
+			return ;
 		}
 	}
+	delete materia;
 }
 
 AMateria	*MateriaSource::createMateria(std::string const &type)
@@ -55,7 +65,7 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i]->getType() == type)
-			return (_materia[i]);
+			return (_materia[i]->clone());
 	}
 	return (0);
 }

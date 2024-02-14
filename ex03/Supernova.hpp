@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Supernova.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 14:42:43 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/14 17:08:41 by oroy             ###   ########.fr       */
+/*   Created: 2024/02/13 14:10:48 by oroy              #+#    #+#             */
+/*   Updated: 2024/02/13 14:27:34 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_H
-# define ICHARACTER_H
+#ifndef SUPERNOVA_H
+# define SUPERNOVA_H
 
-# include <string>
 # include "AMateria.hpp"
 
-class AMateria;
-
-class ICharacter
+class Supernova : public AMateria
 {
 public:
 
-	virtual ~ICharacter() {}
-	virtual std::string const & getName() const = 0;
-	virtual void equip(AMateria* m) = 0;
-	virtual void unequip(int idx) = 0;
-	virtual void use(int idx, ICharacter& target) = 0;
+	Supernova(void);
+	Supernova(Supernova const &src);
+	Supernova(std::string const &type);
+	Supernova &operator=(Supernova const &rhs);
+	~Supernova(void);
 
-	virtual AMateria *getMateriaAddress(int idx) const = 0;
+	AMateria	*clone() const;
+	void		use(ICharacter &target);
 
 };
 
