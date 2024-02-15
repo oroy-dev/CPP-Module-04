@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:15:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 20:38:13 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/15 15:34:03 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,14 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
+	const Cat* n = new Cat();
+	const Animal* o = new Cat(*n);
+	std::cout << o->getType() << " " << std::endl;
+	o->makeSound(); //will output the dog sound!
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
 	const WrongAnimal* wrongmeta = new WrongAnimal();
 	const WrongAnimal* wrongi = new WrongCat();
 	std::cout << wrongi->getType() << " " << std::endl;
@@ -48,6 +56,8 @@ int main()
 
 	delete wrongi;
 	delete wrongmeta;
+	delete o;
+	delete n;
 	delete m;
 	delete k;
 	delete i;

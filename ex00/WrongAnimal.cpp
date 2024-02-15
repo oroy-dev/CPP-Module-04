@@ -18,7 +18,7 @@ WrongAnimal::WrongAnimal(void)
 {
 	std::cout << WANIMAL_PREFIX << "Default constructor called" << std::endl;
 	type = "Captain Falcon";
-	return ; 
+	return ;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const &src)
