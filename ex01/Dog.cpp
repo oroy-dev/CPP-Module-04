@@ -43,7 +43,7 @@ Dog::~Dog(void)
 {
 	std::cout << DOG_PREFIX << "Destructor called" << std::endl;
 	delete	_brain;
-	return ; 
+	return ;
 }
 
 /*	Member Functions -------------------------------------------------------- */

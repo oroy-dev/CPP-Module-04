@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:15:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/12 23:21:57 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/16 16:15:31 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ int main(void)
 		animals[i] = new Dog();
 	for (int i = (total / 2); i < total; i++)
 		animals[i] = new Cat();
+
+	std::cout << std::endl;
+	std::cout << "--- Array Printing ---" << std::endl;
+	std::cout << std::endl;
+
+	for (int i = 0; i < total; i++)
+		animals[i]->makeSound();
 
 	std::cout << std::endl;
 	std::cout << "--- Array Destruction ---" << std::endl;

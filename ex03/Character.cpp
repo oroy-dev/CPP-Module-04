@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 16:27:26 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/14 18:14:18 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/16 17:42:39 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,8 @@ void	Character::equip(AMateria* m)
 
 void	Character::unequip(int idx)
 {
-	_materia[idx] = NULL;
+	if (idx >= 0 && idx <= 3 && _materia[idx])
+		_materia[idx] = NULL;
 }
 
 void	Character::use(int idx, ICharacter& target)
@@ -90,5 +91,16 @@ void	Character::use(int idx, ICharacter& target)
 
 AMateria	*Character::getMateriaAddress(int idx) const
 {
-	return (_materia[idx]);
+	if (idx >= 0 && idx <= 3)
+		return (_materia[idx]);
+	return (NULL);
+}
+
+void	Character::printMateriaList(void) const
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_materia[i])
+			std::cout << i << ": " << _materia[i]->getType() << std::endl;
+	}
 }

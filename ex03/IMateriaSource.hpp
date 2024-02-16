@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:54:51 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/13 15:17:15 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/16 16:48:00 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ public:
 	virtual ~IMateriaSource() {}
 	virtual void learnMateria(AMateria*) = 0;
 	virtual AMateria* createMateria(std::string const & type) = 0;
+
+	virtual void	printMateriaList(void) const = 0;
 
 };
 

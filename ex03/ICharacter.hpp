@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:42:43 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/14 17:08:41 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/16 17:02:06 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	virtual void use(int idx, ICharacter& target) = 0;
 
 	virtual AMateria *getMateriaAddress(int idx) const = 0;
+
+	virtual void	printMateriaList(void) const = 0;
 
 };
 

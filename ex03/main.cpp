@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:29:02 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/14 18:26:03 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/16 17:50:03 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,27 @@
 
 int	main(void)
 {
+	// Materia source - Deep copy test
+	std::cout << std::endl;
+	std::cout << "--- Materia source - Deep copy test ---";
+	std::cout << std::endl;
+
+	MateriaSource* src2 = new MateriaSource();
+	src2->learnMateria(new Ice());
+	src2->learnMateria(new Cure());
+	src2->learnMateria(new Ice());
+	src2->learnMateria(new Cure());
+
+	MateriaSource* src3 = new MateriaSource(*src2);
+
+	delete src2;
+
+	src3->printMateriaList();
+
+	delete src3;
+
 	// Create Materia Source
 	IMateriaSource* src = new MateriaSource();
-
-	// Create Characters
-	ICharacter* cloud = new Character("cloud");
-	ICharacter* sephiroth = new Character("sephiroth");
-
-	Character*	barrett = new Character("barrett");
 	
 	// Fill Materia Source with different materias 
 	src->learnMateria(new Ice());
@@ -60,12 +73,12 @@ int	main(void)
 	src->learnMateria(new Cure());
 	src->learnMateria(new Ice());
 
-	// Equip materias for Cloud
-	cloud->equip(src->createMateria("ice"));
-	cloud->equip(src->createMateria("cure"));
-	cloud->equip(src->createMateria("ice"));
-	cloud->equip(src->createMateria("fire"));
+	std::cout << std::endl;
+	std::cout << "--- Character - Deep copy test ---";
+	std::cout << std::endl;
 
+	Character*	barrett = new Character("barrett");
+	
 	// Equip materias for Barrett
 	barrett->equip(src->createMateria("ice"));
 	barrett->equip(src->createMateria("cure"));
@@ -75,8 +88,28 @@ int	main(void)
 	
 	// Unequip test. Storing the address of the lost materia to requip or delete later
 	AMateria	*item;
-	item = cloud->getMateriaAddress(3);
-	cloud->unequip(3);
+	item = yuffie->getMateriaAddress(1);
+	yuffie->unequip(1);
+
+	barrett->printMateriaList();
+
+	std::cout << std::endl;
+
+	yuffie->printMateriaList();
+
+	std::cout << std::endl;
+	std::cout << "--- RPG Battle ---";
+	std::cout << std::endl;
+
+	// Create Characters
+	ICharacter* cloud = new Character("cloud");
+	ICharacter* sephiroth = new Character("sephiroth");
+
+	// Equip materias for Cloud
+	cloud->equip(src->createMateria("ice"));
+	cloud->equip(src->createMateria("cure"));
+	cloud->equip(src->createMateria("ice"));
+	cloud->equip(src->createMateria("fire"));
 
 	// Equip materias for Sephiroth
 	sephiroth->equip(src->createMateria("supernova"));

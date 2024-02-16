@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+         #
+#    By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 15:50:37 by oroy              #+#    #+#              #
-#    Updated: 2024/02/12 23:22:46 by olivierroy       ###   ########.fr        #
+#    Updated: 2024/02/16 16:14:42 by oroy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ re: fclean all
 # VALGRIND ******************************************************************* #
 
 vleaks:
+	$(MAKE)
 	valgrind \
 	--leak-check=full \
 	--show-leak-kinds=all \

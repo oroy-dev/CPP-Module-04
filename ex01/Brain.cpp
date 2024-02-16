@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 15:51:11 by oroy              #+#    #+#             */
-/*   Updated: 2024/02/15 15:40:47 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/16 16:49:23 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Brain::Brain(void)
 {
 	std::cout << BRAIN_PREFIX << "Default constructor called" << std::endl;
-	return ; 
+	return ;
 }
 
 Brain::Brain(Brain const &src)
